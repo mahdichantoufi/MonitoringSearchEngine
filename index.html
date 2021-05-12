@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./src/documentHTMLHeader.js"></script>
+</head>
+<body>
+  <script src="./src/navHTML.js"></script>
+  <div class='jumbotron'>
+    <form class="form" name="form" id="form">
+      <fieldset class="form-group">
+        <div class="column">
+          <select id="language" name="language" class='language'></select>
+        </div>
+        <div class="column">
+          Language :
+        </div>
+      </fieldset>
+      
+      <fieldset class="searchRows form-group">
+        <div class="row criteria_1">
+          <div class="column side"></div>
+          <div class="column middleleft">
+            <select class="form-control" name="searchType_1" id="searchType_1">
+            </select>
+          </div>
+          <div class="column middleright">
+            <input class="form-control" id="keywords_1" name="keywords_1" type="text" placeholder="mots-clés">
+          </div>
+          <div class="column side">
+            <button type="button" name="add_1" onclick="addRow(1)">+</button>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <fieldset class="form-group">
+          <button type="submit" class="btn btn-secondary">Chercher</button>
+          <button type="reset" class="btn btn-primary" onclick="resetResultSpan()">Nouvelle recherche</button>
+        </fieldset>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <div class="form-check">
+          <ul class="nav nav-tabs"></ul>
+          <div id="myTabContent" class="tab-content"></div>
+      </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <button type="submit" class="btn btn-secondary">Chercher</button>
+        <button type="reset" class="btn btn-primary" onclick="resetResultSpan()">Nouvelle recherche</button>
+      </fieldset>
+    </form>
+  </div>
+  <div class='jumbotron'>
+    <div class="list-group">
+      <span id='ResultSpan'>
+      </span>
+    </div>
+  </div>
+  <script src="./src/Variables.js"></script>
+  <script src="./src/checkableKeywords.js"></script>
+  <script src="./src/formBuilder.js"></script>
+  <script src="./src/queryBuilder.js"></script>
+  <script src="./src/formSubmitted.js"></script>
+</body>
+</html>

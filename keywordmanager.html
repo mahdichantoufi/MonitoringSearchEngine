@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./src/documentHTMLHeader.js"></script>
+</head>
+<body>
+  <script src="./src/navHTML.js"></script>
+  
+  <div class='jumbotron'>
+    <h2>Keyword Management : </h2>
+    <form class="form" name="form" id="form" submit="event.preventDefault()">
+      <fieldset class="form-group">
+        <div class="form-check">
+          <ul class="nav nav-tabs"></ul>
+          <div id="myTabContent" class="tab-content"></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-group">
+        <div class="column col-4">
+          <span id='AddCategoryManagementSpan'></span>
+        </div>
+        <div class="column col-4">
+          <span id='UpdateCategoryManagementSpan'></span>
+        </div>
+        <div class="column col-4">
+          <span id='KeywordManagementSpan'></span>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  
+  <script src="./src/checkableKeywords.js"></script>
+  <script src="./src/keywordmanager.js"></script>
+  <script src="./src/keywordsCategoriesManager.js"></script>
+</body>
+</html>

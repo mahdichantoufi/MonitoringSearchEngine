@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "title": "The Checkable keywords categories schema",
+  "description": "The Checkable keywords categories are tabs containing predefined keywords that can be activated.",
+  "examples": [
+      {
+          "id": 1,
+          "name": "Companies",
+          "created_at": "2020-11-11T13:49:18.564Z",
+          "modified_at": "2020-11-11T13:49:18.564Z",
+          "deleted_at": null
+      }
+  ],
+  "required": [
+      "name"
+  ],
+  "properties": {
+      "id": {
+          "$id": "#/properties/id",
+          "type": "integer",
+          "title": "The id schema",
+          "description": "Auto-generated dB id.",
+          "examples": [
+              1
+          ]
+      },
+      "name": {
+          "$id": "#/properties/name",
+          "type": "string",
+          "title": "The category name schema",
+          "description": "Category name must be unique & not Null in dB.",
+          "examples": [
+              "Companies"
+          ]
+      },
+      "created_at": {
+          "$id": "#/properties/created_at",
+          "type": "string",
+          "title": "The created_at schema"
+      },
+      "modified_at": {
+          "$id": "#/properties/modified_at",
+          "type": "string",
+          "title": "The modified_at schema"
+      }
+  },
+  "additionalProperties": false
+}

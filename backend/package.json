@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "arraylist": "^0.1.0",
+    "bcrypt": "^5.0.0",
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "expressjs-mw": "^1.0.2",
+    "form-data": "^2.3.3",
+    "fs": "0.0.1-security",
+    "helmet": "^3.23.3",
+    "knex": "^0.21.12",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "objection": "^2.2.3",
+    "pg": "^8.3.3",
+    "react-scripts": "^4.0.0",
+    "translate": "^1.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.1"
+  },
+  "scripts": {
+    "migrate": "npx knex migrate:latest",
+    "rollback": "npx knex migrate:rollback",
+    "seed": "npx knex seed:run",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "insertpdfs": "node src/lib/insertpdfs.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

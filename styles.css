@@ -1,0 +1,33 @@
+.titre{
+  text-align: center;
+}
+.form{
+  width: 80%;
+  margin: 0 auto;
+}
+.jumbotron{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.column {
+  text-align: left;
+  float: right;
+  width: 33.33%;
+  margin-left: auto;
+}
+.chechbox{
+  width: 20%;
+}
+.side {
+  width: 10%;
+}
+.middleleft {
+  text-align: left;
+  width: 30%;
+}
+.middleright {
+  text-align: left;
+  width: 50%;
+}

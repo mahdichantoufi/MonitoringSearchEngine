@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./src/documentHTMLHeader.js"></script>
+</head>
+<body>
+  <script src="./src/navHTML.js"></script>
+  <div class='jumbotron'>
+    <h1 class="text-info">Help & Tips</h1>
+  </div>
+  <div class='jumbotron'>
+    <h5 class="text-info">les requêtes :</h5>
+
+    <h6 class="text-info">Fonctionnement du moteur de recherche :</h6>
+    <p>
+      Le constructeur de requêtes sert à aggréger les résultats des différentes sous requêtes. 
+      Il analysera dans un premier temps les sélecteur afin d'éxecuter les requetes avec le sélecteur 'OU' et directement aggréger les résultats avec ceux de la ligne précédente.
+    </p>
+    <p class="text-warning">
+      <small>
+        Exemple : (R représente une sous-requête, soit une ligne du formulaire)<br>
+        R1 ET R2 OU R3 SAUF R4 OU R5 ET R6<br>
+        s'écrit aussi :<br>
+        R1 ET ( R2 OU R3) SAUF (R4 OU R5) ET R6
+      </small>
+    </p>
+
+    <h6 class="text-info">Les mots-clé à cocher :</h6>
+    <p>
+      Les mots clés à cocher sont considérés par le moteur de recherche comme étant des sous-requêtes obligatoires.<br>
+      Ils sont donc des lignes du formulaire avec un sélecteur ET (obligatoire) et une recherche de type expression exacte.
+    </p>
+
+    <h6 class="text-info">Options :</h6>
+    <p>
+      Vous pouvez ajouter autant de lignes que vous souhaitez dans le formulaire.<br>
+    </p>
+    <p>
+      - sélecteurs : <br>
+        'Titre': Mots présents dans le titres. il est conseillé de mettre un mot par sous-requête.<br>
+        'Tous les mots': Tous ces mots devront apparaître au moins une fois dans les documents retournés.<br>
+        'Un des mots': si un de ces mots est retrouvé dans le documents, ce dernier est retourné<br>
+        'Expression exacte': Tous ces mots devront apparaître dans cette ordre exacte.<br>
+    </p>
+    <p>
+      Les langues présentes au dessus du formulaire servent à signaler la langue originale de la requête afin d'avoir une traduction optimale.<br>  
+      'fr',
+      'en',
+      'es',
+      'it'.
+    </p>
+  </div>
+  <div class='jumbotron'>
+    <h5 class="text-info">Gestion des mots-clé à cocher :</h5>
+    <p>
+      La gestion des mots clés à cocher et de leurs catégories se fait <a class="text-info" href="./keywordmanager.html">ici</a>.
+    </p>
+    <h6 class="text-info">Categories Add - Edit - Delete :</h6>
+    <p>
+      Les contenaires pour ajouter, supprimer ou modifier une catégories sont présents sur la page de gestion au chargement.
+    </p>
+    <h6 class="text-info">mots-clé Add - Edit - Delete :</h6>
+    <p>
+      Pour ajouter un mot-clé, il suffit de cliquer sur la catégorie à laquelle vous souhaitez l'attribuer puis renseigner les champs.
+    </p>
+    <p>
+      Pour Supprimer ou modifier un mot-clé, il suffit de cliquer sur la catégorie dans laquelle il se trouve, ensuite cliquer dessus, puis renseigner les nouvelles valeurs.
+    </p>
+  </div>
+  <div class='jumbotron'>
+    <h5 class="text-info">L'ajout d'un document pdf à travers le site</h5>
+    <p>
+      L'ajout d'un document pdf avec son texte se fait <a class="text-info" href="./adddocument.html">ici</a>.
+    </p>
+  </div>
+  <div class='jumbotron'>
+    <h5 class="text-info">L'ajout d'un document pdf à travers le backend</h5>
+    <p>
+      Dans le cas où plusieurs documents sont à insérer, vous pourrez mettre tous vos documents PDF accompagnés de leurs fichiers .txt récupérés sur un site de conversion.
+    </p>
+    <p>
+      Dans le backend, mettre les documents cités précédemment dans le répertoire suivant :<br>
+      /backend/Files/PDFs_to_insert .<br>
+      Il suffit ensuite de lancer le script qui les traitera en lançant la commande suivante à la racine du dossier /backend/ :<br>
+      npm run insertpdfs<br>
+    </p>
+  </div>
+</body>
+</html>

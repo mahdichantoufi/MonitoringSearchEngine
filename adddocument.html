@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./src/documentHTMLHeader.js"></script>
+</head>
+<body>
+  <script src="./src/navHTML.js"></script>
+  
+  <div class='jumbotron'>
+    <h2>Add a document : </h2>
+    <form class="form" name="form" id="form" submit="event.preventDefault()">
+      <fieldset class="form-group">
+        <label for="myFile">Upload your pdf file here</label>
+      </fieldset>
+      <fieldset class="form-group">
+        <input type="file" id="myFile" name="filename">
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="myFileText">Enter file text here</label>
+      </fieldset>
+      <fieldset class="form-group">
+        <input type="file" id="myFileText" name="filenametext">
+      </fieldset>
+      <fieldset class="form-group">
+        <input type="submit">
+      </fieldset>
+    </form>
+  </div>
+  <script src="./src/addDocument.js"></script>
+</body>
+</html>
